@@ -16,4 +16,4 @@ app.post('/', function (req: express.Request, res: express.Response) {
     console.log(req.body)
   })
  
-app.listen(8080);
+app.listen(process.env.PORT||3000);
