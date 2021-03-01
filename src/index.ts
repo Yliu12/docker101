@@ -7,11 +7,11 @@ app.use(bodyParser.json());
 
 
 app.get('/', function (req: express.Request, res: express.Response) {
-  res.send(req.body);
+  res.send("Hello world");
   console.log(req.body)
 })
 
-app.post('/', function (req: express.Request, res: express.Response) {
+app.post('/message', function (req: express.Request, res: express.Response) {
     res.send(req.body)
     console.log(req.body)
   })
