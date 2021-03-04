@@ -1,6 +1,7 @@
 import { MyKeyv, repos, RepositoryType } from "./RepositoryService";
 import { User } from './UserService';
 import { v4 as uuid } from 'uuid';
+import { ServiceError } from "./Model";
 
 export class MessageService {
     messageRepo: MyKeyv<Message>;
@@ -20,6 +21,21 @@ export class MessageService {
         await this.messageRepo.set(id, message);
         return message;
     }
+
+    async update(id:string, newMessage: Message): Promise<Message> {
+        const message = await this.messageRepo.get(id);
+        if(!message) throw new ServiceError(`message not found`, 404);
+        await this.messageRepo.set(id, newMessage);
+        return newMessage;
+    }
+
+
+    async delete(id: string): Promise<void> {
+        const msg =  await this.messageRepo.get(id);
+        if(!msg) throw new ServiceError(`message not found`, 404);
+        this.messageRepo.delete(id);
+    }
+
 
     async list(from?:string, to?:string): Promise<Message[]> {
         // KNOWN BUG, this searches for from or to match, not from and to match
