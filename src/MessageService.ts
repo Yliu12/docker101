@@ -4,8 +4,9 @@ import { v4 as uuid } from 'uuid';
 
 export class MessageService {
     messageRepo: MyKeyv<Message>;
+    repositoryType = RepositoryType.Message;
     constructor() {
-        this.messageRepo = repos.get(RepositoryType.Message);
+        this.messageRepo = repos.get(this.repositoryType);
     }
 
     async get(id: string): Promise<Message|undefined> {
@@ -20,13 +21,16 @@ export class MessageService {
         return message;
     }
 
-    async list(user1:string, user2?:string): Promise<Message[]> {
-        // obviously a bug
-        return this.messageRepo.query<Message>((v,_k)=> {
-            if (v.indexOf(user1)>-1){
+    async list(from?:string, to?:string): Promise<Message[]> {
+        // KNOWN BUG, this searches for from or to match, not from and to match
+        return this.messageRepo.query((v,_k)=> {
+            if(!from && !to){
                 return true;
             }
-            if (user2 && v.indexOf(user2)>-1){
+            if (v.from.id==from){
+                return true;
+            }
+            if (v.to.id==to){
                 return true;
             }
             return false

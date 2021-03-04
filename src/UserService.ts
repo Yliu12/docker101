@@ -13,9 +13,16 @@ export class UserService {
     }
     async set(user: User): Promise<User> {
         user.id = uuid();
+        this.userRepo.validate(user);
         await this.userRepo.set(user.id, user);
         return user;
     }
+
+    // async update(id:string, user: User): Promise<User> {
+    //     user.id = uuid();
+    //     await this.userRepo.set(user.id, user);
+    //     return user;
+    // }
 
     async list(): Promise<User[]> {
         return this.userRepo.query(()=>true);
