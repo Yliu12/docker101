@@ -27,6 +27,12 @@ export class UserService {
         return user;
     }
 
+    async delete(id: string): Promise<void> {
+        const msg =  await this.userRepo.get(id);
+        if(!msg) throw new ServiceError(`user not found`, 404);
+        this.userRepo.delete(id);
+    }
+
     async list(): Promise<User[]> {
         return this.userRepo.query(()=>true);
     }

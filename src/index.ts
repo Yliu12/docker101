@@ -84,9 +84,9 @@ app.get('/api/users', async (_req: express.Request, res: express.Response, next:
   res.json(users);
 });
 
-app.delete('/api/messages/:id', async (req: express.Request, res: express.Response, next:express.NextFunction) => {
-  const messageId = req.params.id
-  await messageService.delete(messageId).catch(next);
+app.delete('/api/users/:id', async (req: express.Request, res: express.Response, next:express.NextFunction) => {
+  const userId = req.params.id
+  await userService.delete(userId).catch(next);
   return res.status(204);
 });
 
