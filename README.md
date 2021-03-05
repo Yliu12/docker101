@@ -68,6 +68,7 @@
 * Test the **Message API** to see if it meets the requirements.
     * You do not need to test the User API
 * Your test script needs to be automated
+* We do not expect that you spend more than 8 hours on this challenge.
 * Use what language and testing framework you are comfortable with, such as JUnit or Jest.
 * The source code must be shared in a public repository (Github, Bitbucket, etc).
 * Write a README file on how to run you test script and a brief description of what you've tested (and any bugs you find).
