@@ -40,12 +40,12 @@ app.get('/api/messages/:id', async (req: express.Request, res: express.Response,
 });
 
 
-// app.put('/api/messages/:id', async (req: express.Request, res: express.Response, next:express.NextFunction) => {
-//   const messageId = req.params.id
-//   const message = req.body as User;
-//   const saved = await userService.update(messageId, message).catch(next);
-//   res.status(200).json(saved);
-// });
+app.put('/api/messages/:id', async (req: express.Request, res: express.Response, next:express.NextFunction) => {
+  const messageId = req.params.id
+  const message = req.body as User;
+  const saved = await userService.update(messageId, message).catch(next);
+  res.status(200).json(saved);
+});
 
 app.delete('/api/messages/:id', async (req: express.Request, res: express.Response, next:express.NextFunction) => {
   const messageId = req.params.id

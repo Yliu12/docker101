@@ -1,42 +1,71 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <div class="container mt-5">
-      <div class="jumbotron">
-        <h3 class="display-4">Hello, world!</h3>
-        <p class="lead">This is a placeholder for instructions</p>
-        <hr class="my-4">
-        <p>Placeholder for introduction to postman</p>
-        <div class="postman-run-button"
-          data-postman-action="collection/import"
-          data-postman-var-1="5cac7af3ce3ea1ac66be"></div>
-          <script type="text/javascript">
-            (function (p,o,s,t,m,a,n) {
-              !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
-              !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
-                (n = o.createElement("script")),
-                (n.id = s+t), (n.async = 1), (n.src = m), n
-              ));
-            }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
-          </script>
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <title>Hello, world!</title>
+   </head>
+   <body>
+      <div class="container t-5">
+         <div class="jumbotron">
+            <h3 class="display-4">Hello, world!</h3>
+            <p>Imagine we are making a private messaging service for our new company Perry’s Summer Vacation Goods and Services. We need you to create an automated test script that verifies the functionalities of the service. </p>
+            <h3 id="requirements-of-perry-s-summer-vacation-goods-and-services-">Requirements of Perry’s Summer Vacation Goods and Services.</h3>
+            <h4 id="develop-a-scalable-api-to-be-able-to-handle-the-many-messages-this-company-is-going-to-handle">Develop a scalable API to be able to handle the many messages this company is going to handle</h4>
+            <ul>
+               <li>The application should be a REST API (No need for any kind of UI)</li>
+               <li>The application should be ready to run in the cloud or in a container.</li>
+               <li>
+                  <p>The application data must be persisted in a database of some type.</p>
+               </li>
+               <li>
+                  <p>The application must be able to create and get users.</p>
+                  <ul>
+                     <li>We do not expect you do handle any kind of authentication for users.</li>
+                  </ul>
+               </li>
+               <li>
+                  The application must allow users to send a message to one other user.
+                  <ul>
+                     <li>No need to consider group chats.</li>
+                  </ul>
+               </li>
+               <li>The application must allow editing and deleting messages.</li>
+               <li>The application must be able to get all the messages sent between two users.</li>
+            </ul>
+            <h4 id="technical-requirements-for-your-test-script-">Technical requirements for your test script:</h4>
+            <ul>
+               <li>Use what language you are comfortable with, but Typescript, Javascript, Java preferred.</li>
+               <li>The source code must be shared in a public repository (Github, Bitbucket, etc).</li>
+            </ul>
+            <h4 id="the-developer-has-provided-some-information-that-might-helpful">The developer has provided some information that might helpful</h4>
+            <ul>
+               <li>
+                  <div class="postman-run-button"
+                     data-postman-action="collection/import"
+                     data-postman-var-1="5cac7af3ce3ea1ac66be"></div>
+                  <script type="text/javascript">
+                     (function (p,o,s,t,m,a,n) {
+                       !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                       !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                         (n = o.createElement("script")),
+                         (n.id = s+t), (n.async = 1), (n.src = m), n
+                       ));
+                     }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+                  </script>
+                </div>
+                </li>
+         <li>There&#39;s no pre-existing data in the application, you need to create users and messages using the provided requests.</li>
+         </ul>        
       </div>
-    </div>
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+      </div>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   </body>
 </html>

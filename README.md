@@ -1,5 +1,11 @@
 
-###   Develop a scalable API to be able to handle the many messages this company is going to handle
+Imagine we are making a private messaging service for our new company Perry’s Summer Vacation Goods and Services. We need you to create an automated test script that verifies the functionalities of the service. 
+### Requirements of Perry’s Summer Vacation Goods and Services.
+####   Develop a scalable API to be able to handle the many messages this company is going to handle
+
+* The application should be a REST API (No need for any kind of UI)
+* The application should be ready to run in the cloud or in a container.
+* The application data must be persisted in a database of some type.
 
 * The application must be able to create and get users.
 	* We do not expect you do handle any kind of authentication for users.
@@ -8,12 +14,57 @@
 * The application must allow editing and deleting messages.
 * The application must be able to get all the messages sent between two users.
 
-* The application must be able to get a list of other users that have sent or received messages to/from a specified user.
+#### APIs your developer created:
+**User Model**
+```
+{
+    "name": "first last",
+    "id": "uuid-of-user"
+}
+```
+* POST /users   
+    * Create a user
+* GET /users
+    * list all users
+* GET /users/:id
+    * Get a user by id
+* PUT /users/:id
+    * Update a user by id
+* DELETE /users/:id
+    * Delete a user by id
 
-#### Technical requirements:
+**Message Model**
+```
+{
+    "from": {
+        "id": "fromUserId"
+    },
+    "to": {
+        "id": "toUserId"
+    },
+    "message": "text content of the message",
+    "id": "uuid-of-message",
+    "time": "2021-03-04T00:54:30.288Z"
+}
+```
 
-* The application should be a REST API (No need for any kind of UI)
-* Use what language you are comfortable with, but Typescript, Javascript, Java preferred.
+* POST /message   
+    * Create a message
+* GET /message?from=fromUserId&to=toUserId
+    * Get all the messages sent between two users.
+* GET /message/:id
+    * Get a message by id
+* PUT /message/:id
+    * Update a message by id
+* DELETE /message/:id
+    * Delete a message by id
+
+#### The developer has provided some information that might helpful
+* [![Postman collection](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5cac7af3ce3ea1ac66be)
+* There's no pre-existing data in the application, you need to create users and messages using the provided requests.
+
+
+#### Technical requirements for your test script:
+
+* Use what language and testing framework you are comfortable with, such as JUnit or Jest.
 * The source code must be shared in a public repository (Github, Bitbucket, etc).
-* The application should be ready to run in the cloud or in a container (You can use any technology available in AWS).
-* The application data must be persisted in a database of some type.
