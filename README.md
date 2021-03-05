@@ -1,5 +1,5 @@
 
-Imagine we are making a private messaging service for our new company Perry’s Summer Vacation Goods and Services. We need you to create an automated test script that verifies the functionalities of the service. 
+#### Imagine we are making a private messaging service for our new company Perry’s Summer Vacation Goods and Services. We need you to create an automated test script that verifies the **Message API**, not User API. 
 ### Requirements of Perry’s Summer Vacation Goods and Services.
 ####   Develop a scalable API to be able to handle the many messages this company is going to handle
 
@@ -48,7 +48,7 @@ Imagine we are making a private messaging service for our new company Perry’s 
 }
 ```
 
-* POST /message   
+* POST /message  
     * Create a message
 * GET /message?from=fromUserId&to=toUserId
     * Get all the messages sent between two users.
@@ -60,11 +60,14 @@ Imagine we are making a private messaging service for our new company Perry’s 
     * Delete a message by id
 
 #### The developer has provided some information that might helpful
-* [![Postman collection](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5cac7af3ce3ea1ac66be)
+* Postman collection [![Postman collection](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5cac7af3ce3ea1ac66be)
 * There's no pre-existing data in the application, you need to create users and messages using the provided requests.
 
 
 #### Technical requirements for your test script:
-
+* Test the **Message API** to see if it meets the requirements.
+    * You do not need to test the User API
+* Your test script needs to be automated
 * Use what language and testing framework you are comfortable with, such as JUnit or Jest.
 * The source code must be shared in a public repository (Github, Bitbucket, etc).
+* Write a README file on how to run you test script and a brief description of what you've tested (and any bugs you find).

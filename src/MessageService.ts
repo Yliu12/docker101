@@ -38,7 +38,6 @@ export class MessageService {
 
 
     async list(from?:string, to?:string): Promise<Message[]> {
-        // KNOWN BUG, this searches for from or to match, not from and to match
         return this.messageRepo.query((v,_k)=> {
             if(!from && !to){
                 return true;
@@ -54,7 +53,6 @@ export class MessageService {
             return (new Date(y.time!)).getTime() - (new Date(x.time!)).getTime();
         });
     }
-    
 }
 
 export interface Message {
